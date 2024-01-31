@@ -11,6 +11,7 @@ pipeline {
         stage('Build and Deploy') {
             steps {
                 // Your build and deploy steps here
+                sh 'cp -r * /var/www/html/'
             }
         }
     }
