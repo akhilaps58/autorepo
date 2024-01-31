@@ -1,10 +1,12 @@
 pipeline {
     agent any
     
-    stages {
+     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: 'main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/akhilaps58/autorepo.git']]])
+                checkout([$class: 'GitSCM', 
+                          branches: [[name: 'main']], // Specify the branch you want
+                          userRemoteConfigs: [[url: 'https://github.com/akhilaps58/autorepo.git']]])
             }
         }
 
