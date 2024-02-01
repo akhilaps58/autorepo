@@ -8,8 +8,8 @@ pipeline {
                     // Clean workspace before checkout
                     deleteDir()
 
-                    // Clone the repository without specifying a refspec
-                    checkout([$class: 'GitSCM', userRemoteConfigs: [[url: 'https://github.com/akhilaps58/autorepo.git']]])
+                    // Clone the repository and specify the branch
+                    checkout([$class: 'GitSCM', branches: [[name: 'master']], userRemoteConfigs: [[url: 'https://github.com/akhilaps58/autorepo.git']]])
                 }
             }
         }
