@@ -9,7 +9,7 @@ pipeline {
                     deleteDir()
 
                     // Clone the repository and specify the branch
-                    checkout([$class: 'GitSCM', branches: [[name: 'master']], userRemoteConfigs: [[url: 'https://github.com/akhilaps58/autorepo.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/akhilaps58/autorepo.git']]])
                 }
             }
         }
