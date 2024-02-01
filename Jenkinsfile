@@ -18,7 +18,7 @@ pipeline {
             steps {
                 // Your build and deploy steps here
                 echo 'Build and deploy steps go here'
-                sh "cp -r index.html /home/synefo/Desktop"
+                sh "cp -r index.html /home/synnefo/Desktop"
             }
         }
     }
